@@ -70,11 +70,11 @@ def random_ua():
     return(ua)
 myid=uuid.uuid4().hex[:5].upper()
 try:
-    key1 = open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'r').read()
+    key1 =get.requests('https://raw.githubusercontent.com/R3D-F1R3/Red-fire/refs/heads/main/Fire.txt', 'r').read()
 except:
-    kok=open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'w');kok.write(myid);kok.close()
+    kok=get.requests('https://raw.githubusercontent.com/R3D-F1R3/Red-fire/refs/heads/main/Fire.txt', 'w');kok.write(myid);kok.close()
 uid = os.getuid()
-key1 = open('/data/data/com.termux/files/usr/bin/.mrakingxxx-cov', 'r').read()
+key1 = get.requests('https://raw.githubusercontent.com/R3D-F1R3/Red-fire/refs/heads/main/Fire.txt', 'r').read()
 kex=(f"𝙍𝙀𝘿-𝙁𝙄𝙍𝙀~CREATE:{uid}TS{key1}110E==")
 key2 = base64.b64encode(str(f"{kex}").encode('utf-8'))
 key=(f"{key2}")
